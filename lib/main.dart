@@ -13,8 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: Constants.appTitle,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
         elevatedButtonTheme:
             ElevatedButtonThemeData(style: CommonStyle.basicBtn),
         fontFamily: Constants.fontGamja,

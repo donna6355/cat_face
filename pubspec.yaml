@@ -26,4 +26,4 @@ flutter:
   fonts:
     - family: GamjaFlower
       fonts:
-        - asset: asset/fonts/GamjaFlower-Regular.ttf
+        - asset: assets/fonts/GamjaFlower-Regular.ttf
