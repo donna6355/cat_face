@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './core/core.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,14 +8,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: Constants.appTitle,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        elevatedButtonTheme:
+            ElevatedButtonThemeData(style: CommonStyle.basicBtn),
+        fontFamily: Constants.fontGamja,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
