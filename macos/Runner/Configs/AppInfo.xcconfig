@@ -8,7 +8,7 @@
 PRODUCT_NAME = cat_face
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.catFace
+PRODUCT_BUNDLE_IDENTIFIER = com.donna6355.catFace
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 com.donna6355. All rights reserved.
