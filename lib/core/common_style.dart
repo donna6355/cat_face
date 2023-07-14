@@ -41,12 +41,19 @@ class CommonStyle {
 
   static ButtonStyle basicBtn = ButtonStyle(
     backgroundColor: MaterialStateProperty.all<Color>(primaryGray),
+    foregroundColor: MaterialStateProperty.all<Color>(subGray),
     fixedSize: MaterialStateProperty.all<Size>(const Size(200, 40)),
     textStyle: MaterialStateProperty.all<TextStyle>(
-      const TextStyle(
-        fontSize: 18,
-        fontFamily: Constants.fontGamja,
-      ),
+      const TextStyle(fontSize: 18, fontFamily: Constants.fontGamja),
+    ),
+  );
+
+  static ButtonStyle reverseBtn = ButtonStyle(
+    backgroundColor: MaterialStateProperty.all<Color>(subGray),
+    foregroundColor: MaterialStateProperty.all<Color>(primaryGray),
+    fixedSize: MaterialStateProperty.all<Size>(const Size(200, 40)),
+    textStyle: MaterialStateProperty.all<TextStyle>(
+      const TextStyle(fontSize: 18, fontFamily: Constants.fontGamja),
     ),
   );
 }
