@@ -7,6 +7,38 @@ class CommonStyle {
   static const Color primaryGray = Color(0xff454442);
   static const Color subGray = Color(0xffE5E4DB);
 
+  static const TextStyle headerCoreWhite = TextStyle(
+    fontSize: 28,
+    color: Colors.white,
+  );
+  static TextStyle headerOuterGray = TextStyle(
+    fontSize: 28,
+    foreground: Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 4
+      ..color = primaryGray,
+  );
+  static const TextStyle subHeaderCoreWhite = TextStyle(
+    fontSize: 16,
+    color: Colors.white,
+  );
+  static TextStyle subHeaderOuterGray = TextStyle(
+    fontSize: 16,
+    foreground: Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2
+      ..color = primaryGray,
+  );
+  static const TextStyle paragraphText = TextStyle(
+    fontSize: 16,
+    height: 1.5,
+    color: primaryGray,
+  );
+  static const TextStyle underlineText = TextStyle(
+    color: primaryGray,
+    decoration: TextDecoration.underline,
+  );
+
   static ButtonStyle basicBtn = ButtonStyle(
     backgroundColor: MaterialStateProperty.all<Color>(primaryGray),
     fixedSize: MaterialStateProperty.all<Size>(const Size(200, 40)),
