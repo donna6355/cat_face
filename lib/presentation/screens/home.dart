@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
               ),
               ParagraphText(Languages.of(context)!.appDescription),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.of(context).pushNamed('/camera'),
                   child: Text(Languages.of(context)!.takePic)),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
