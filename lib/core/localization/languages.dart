@@ -10,4 +10,5 @@ abstract class Languages {
   String get takePic;
   String get getPic;
   String get lang;
+  String get picGuide;
 }

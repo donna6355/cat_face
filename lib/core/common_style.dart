@@ -19,11 +19,11 @@ class CommonStyle {
       ..color = primaryGray,
   );
   static const TextStyle subHeaderCoreWhite = TextStyle(
-    fontSize: 16,
+    fontSize: 20,
     color: Colors.white,
   );
   static TextStyle subHeaderOuterGray = TextStyle(
-    fontSize: 16,
+    fontSize: 20,
     foreground: Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2

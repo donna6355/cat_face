@@ -12,4 +12,6 @@ class LanguagesKo extends Languages {
   String get getPic => '사진 가져오기';
   @override
   String get lang => 'English';
+  @override
+  String get picGuide => '귀와 얼굴 전체가 나오도록\n정면에서 촬영해주세요!';
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 
+import '../components/components.dart';
+
 class TakePicture extends StatefulWidget {
   const TakePicture({super.key});
 
@@ -52,7 +54,12 @@ class _TakePictureState extends State<TakePicture> {
     return MaterialApp(
       home: _camCtrl == null
           ? const CircularProgressIndicator()
-          : CameraPreview(_camCtrl!),
+          : Stack(
+              children: [
+                CameraPreview(_camCtrl!),
+                CameraOverlay(),
+              ],
+            ),
     );
   }
 }
