@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../components/components.dart';
 import '../../core/core.dart';
+import '../../logic/logic.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -23,12 +24,14 @@ class Home extends StatelessWidget {
               ),
               ParagraphText(Languages.of(context)!.appDescription),
               ElevatedButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/camera'),
+                  onPressed: () =>
+                      ImgHelper.fetchImg(forCam: true, ctx: context),
                   child: Text(Languages.of(context)!.takePic)),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () =>
+                      ImgHelper.fetchImg(forCam: false, ctx: context),
                   style: CommonStyle.reverseBtn,
                   child: Text(Languages.of(context)!.getPic),
                 ),
