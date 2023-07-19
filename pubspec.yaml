@@ -19,9 +19,8 @@ dependencies:
       url: https://github.com/filofan1/tflite_flutter_helper.git
       ref: 783f15e5a87126159147d8ea30b98eea9207ac70
   image: ^3.3.0
-  image_cropper: ^5.0.0
-  camera: ^0.8.1+7
   image_picker: ^1.0.0
+  image_cropper: ^5.0.0
   shared_preferences: ^2.2.0
 
 dev_dependencies:
