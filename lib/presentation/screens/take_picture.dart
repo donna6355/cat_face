@@ -51,15 +51,16 @@ class _TakePictureState extends State<TakePicture> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: _camCtrl == null
-          ? const CircularProgressIndicator()
-          : Stack(
-              children: [
-                CameraPreview(_camCtrl!),
-                CameraOverlay(),
-              ],
-            ),
+    return Material(
+      color: Colors.black,
+      child: Stack(
+        children: [
+          _camCtrl == null
+              ? const CircularProgressIndicator()
+              : Center(child: CameraPreview(_camCtrl!)),
+          const CameraOverlay(),
+        ],
+      ),
     );
   }
 }
