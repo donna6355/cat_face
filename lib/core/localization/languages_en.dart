@@ -13,6 +13,5 @@ class LanguagesEn extends Languages {
   @override
   String get lang => '한국어';
   @override
-  String get picGuide =>
-      'Take front shot\nincluding ears and the whole face'; //TODO check this
+  String get picGuide => 'Crop the whole face with ears!';
 }
