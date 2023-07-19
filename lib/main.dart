@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: Languages.of(context)!.appName,
+      title: Constants.appTitle,
       locale: _locale,
       localizationsDelegates: const [
         AppLocalizationsDelegate(),
@@ -67,6 +67,7 @@ class _MyAppState extends State<MyApp> {
         elevatedButtonTheme:
             ElevatedButtonThemeData(style: CommonStyle.basicBtn),
         fontFamily: Constants.fontGamja,
+        primaryColor: Colors.black,
       ),
       routes: {
         '/': (_) => const Home(),
