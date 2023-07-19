@@ -70,7 +70,6 @@ class _MyAppState extends State<MyApp> {
       ),
       routes: {
         '/': (_) => const Home(),
-        '/crop': (context) => const CropImage(),
         '/mood': (_) => const MoodResult(),
       },
     );
