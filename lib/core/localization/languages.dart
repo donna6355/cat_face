@@ -11,4 +11,26 @@ abstract class Languages {
   String get getPic;
   String get lang;
   String get picGuide;
+  String get analyzing;
+  String get retry;
+
+  String get peaceCat;
+  String get yawnCat;
+  String get angryCat;
+  String get sleepyCat;
+  String get excitedCat;
+  String get failed;
+  String get peaceCatDescription;
+  String get yawnCatDescription;
+  String get angryCatDescription;
+  String get sleepyCatDescription;
+  String get excitedCatDescription;
+  String get failedDescription;
+  String get peaceCatContents;
+  String get yawnCatContents;
+  String get angryCatContents;
+  String get sleepyCatContents;
+  String get excitedCatContents;
+  String get failedContents;
+  String get warning;
 }

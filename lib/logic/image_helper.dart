@@ -41,7 +41,7 @@ class ImgHelper {
       ],
     );
     if (croppedFile == null) return;
-    //TODO push to loading page
-    Navigator.of(ctx).pushNamed('/mood', arguments: croppedFile.path);
+    Navigator.of(ctx)
+        .pushNamed(NamedRoutes.analyze, arguments: croppedFile.path);
   }
 }
