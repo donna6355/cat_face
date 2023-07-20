@@ -6,12 +6,14 @@ import '../../core/core.dart';
 class MoodRes {
   final String file;
   final String header;
+  final String description;
   final String contents;
   final String icon;
 
   const MoodRes({
     required this.file,
     required this.header,
+    required this.description,
     required this.contents,
     required this.icon,
   });
@@ -28,6 +30,13 @@ class MoodRes {
       'sleepy': Languages.of(ctx)!.sleepyCat,
       'excited': Languages.of(ctx)!.excitedCat,
     };
+    final Map<String, String> description = {
+      'peace': Languages.of(ctx)!.peaceCatDescription,
+      'yawn': Languages.of(ctx)!.yawnCatDescription,
+      'angry': Languages.of(ctx)!.angryCatDescription,
+      'sleepy': Languages.of(ctx)!.sleepyCatDescription,
+      'excited': Languages.of(ctx)!.excitedCatDescription,
+    };
     final Map<String, String> contents = {
       'peace': Languages.of(ctx)!.peaceCatContents,
       'yawn': Languages.of(ctx)!.yawnCatContents,
@@ -40,14 +49,16 @@ class MoodRes {
         ? MoodRes(
             file: file,
             header: Languages.of(ctx)!.failed,
+            description: Languages.of(ctx)!.failedDescription,
             contents: Languages.of(ctx)!.failedContents,
-            icon: 'icon',
+            icon: 'assets/images/failed_cat.png',
           )
         : MoodRes(
             file: file,
-            header: header[label]!,
-            contents: contents[label]!,
-            icon: 'icon',
+            header: header[label] ?? '',
+            description: description[label] ?? '',
+            contents: contents[label] ?? '',
+            icon: 'assets/images/${label}_cat.png',
           );
   }
 }

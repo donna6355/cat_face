@@ -2,16 +2,16 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-import '../../core/core.dart';
 import '../components/components.dart';
+import '../../core/core.dart';
+import '../../data/mood_result_model.dart';
 
 class MoodResult extends StatelessWidget {
   const MoodResult({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, String> res =
-        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+    final MoodRes res = ModalRoute.of(context)!.settings.arguments as MoodRes;
     return Material(
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -19,14 +19,28 @@ class MoodResult extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 48),
           child: Column(
             children: [
-              OutlinedText(
-                label: Languages.of(context)!.appName,
-              ),
+              OutlinedText(label: res.header),
               Padding(
                 padding: const EdgeInsets.only(top: 24),
-                child: Image.file(File(res['file']!), width: 264),
+                child: Image.file(File(res.file), width: 264),
               ),
-              ParagraphText(res['mood']!),
+              ResultCard(
+                  description: res.description,
+                  contents: res.contents,
+                  icon: res.icon),
+              Text(
+                Languages.of(context)!.warning,
+                style: CommonStyle.warningText,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 40),
+                child: ElevatedButton(
+                  onPressed: () => Navigator.of(context)
+                      .pushNamedAndRemoveUntil(NamedRoutes.home, (_) => false),
+                  style: CommonStyle.basicBtn,
+                  child: Text(Languages.of(context)!.retry),
+                ),
+              ),
             ],
           ),
         ),

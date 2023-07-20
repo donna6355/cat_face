@@ -20,6 +20,12 @@ abstract class Languages {
   String get sleepyCat;
   String get excitedCat;
   String get failed;
+  String get peaceCatDescription;
+  String get yawnCatDescription;
+  String get angryCatDescription;
+  String get sleepyCatDescription;
+  String get excitedCatDescription;
+  String get failedDescription;
   String get peaceCatContents;
   String get yawnCatContents;
   String get angryCatContents;
