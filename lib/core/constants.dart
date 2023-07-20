@@ -10,3 +10,10 @@ class Assets {
   static const String tfLabel = 'assets/models/labels.txt';
   static const String tfModel = 'models/model_unquant.tflite';
 }
+
+class NamedRoutes {
+  NamedRoutes._();
+  static const String home = '/';
+  static const String analyze = '/analyze';
+  static const String mood = '/mood';
+}

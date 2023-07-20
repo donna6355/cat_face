@@ -70,8 +70,9 @@ class _MyAppState extends State<MyApp> {
         primaryColor: Colors.black,
       ),
       routes: {
-        '/': (_) => const Home(),
-        '/mood': (_) => const MoodResult(),
+        NamedRoutes.home: (_) => const Home(),
+        NamedRoutes.analyze: (_) => const Analyzing(),
+        NamedRoutes.mood: (_) => const MoodResult(),
       },
     );
   }

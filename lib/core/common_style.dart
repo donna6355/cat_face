@@ -38,6 +38,11 @@ class CommonStyle {
     color: primaryGray,
     decoration: TextDecoration.underline,
   );
+  static const TextStyle warningText = TextStyle(
+    fontSize: 12,
+    height: 1.5,
+    color: primaryGray,
+  );
 
   static ButtonStyle basicBtn = ButtonStyle(
     backgroundColor: MaterialStateProperty.all<Color>(primaryGray),

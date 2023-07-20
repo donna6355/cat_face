@@ -14,4 +14,34 @@ class LanguagesEn extends Languages {
   String get lang => '한국어';
   @override
   String get picGuide => 'Crop the whole face with ears!';
+  @override
+  String get analyzing => 'Analyzing...\nPlease wait for a moment.';
+  @override
+  String get peaceCat => 'Peaceful Cat';
+  @override
+  String get yawnCat => 'Yawning Cat';
+  @override
+  String get angryCat => 'Angry Cat';
+  @override
+  String get sleepyCat => 'Sleepy Cat';
+  @override
+  String get excitedCat => 'Excited Cat';
+  @override
+  String get failed => 'Unidentified Creature?';
+  @override
+  String get retry => 'Retry';
+  @override
+  String get peaceCatContents => '';
+  @override
+  String get yawnCatContents => '';
+  @override
+  String get angryCatContents => '';
+  @override
+  String get sleepyCatContents => '';
+  @override
+  String get excitedCatContents => '';
+  @override
+  String get failedContents => '';
+  @override
+  String get warning => '';
 }
