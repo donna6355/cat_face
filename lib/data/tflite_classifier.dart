@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:image/image.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
+import './tflite_classifier_model.dart';
 
 typedef ClassifierLabels = List<String>;
 
@@ -53,7 +54,7 @@ class Classifier {
     _model.interpreter.close();
   }
 
-  ClassifierCategory predict(Image image) {
+  ClassifierResult predict(Image image) {
     // Load the image and convert it to TensorImage for TensorFlow Input
     final inputImage = _preProcessInput(image);
 
@@ -73,16 +74,16 @@ class Classifier {
     return topResult;
   }
 
-  List<ClassifierCategory> _postProcessOutput(TensorBuffer outputBuffer) {
+  List<ClassifierResult> _postProcessOutput(TensorBuffer outputBuffer) {
     final probabilityProcessor = TensorProcessorBuilder().build();
 
     probabilityProcessor.process(outputBuffer);
 
     final labelledResult = TensorLabel.fromList(_labels, outputBuffer);
 
-    final categoryList = <ClassifierCategory>[];
+    final List<ClassifierResult> categoryList = [];
     labelledResult.getMapWithFloatValue().forEach((key, value) {
-      final category = ClassifierCategory(key, value);
+      final category = ClassifierResult(key, value);
       categoryList.add(category);
     });
     categoryList.sort((a, b) => (b.score > a.score ? 1 : -1));
@@ -118,29 +119,4 @@ class Classifier {
     // #6
     return inputTensor;
   }
-}
-
-class ClassifierCategory {
-  final String label;
-  final double score;
-
-  ClassifierCategory(this.label, this.score);
-}
-
-class ClassifierModel {
-  Interpreter interpreter;
-
-  List<int> inputShape;
-  List<int> outputShape;
-
-  TfLiteType inputType;
-  TfLiteType outputType;
-
-  ClassifierModel({
-    required this.interpreter,
-    required this.inputShape,
-    required this.outputShape,
-    required this.inputType,
-    required this.outputType,
-  });
 }
