@@ -21,7 +21,7 @@ class LanguagesKo extends Languages {
   @override
   String get yawnCat => '하품하는 고양이';
   @override
-  String get angryCat => '화난 고양이';
+  String get angryCat => '승질난 고양이';
   @override
   String get sleepyCat => '쿨쿨 졸린 고양이';
   @override
