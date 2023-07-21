@@ -23,6 +23,7 @@ class ClassifierRepo {
     final ClassifierResult res = _classifier!.predict(image);
     await Future.delayed(const Duration(seconds: 2));
     final MoodRes arg = MoodRes.fromRes(file: path, res: res, ctx: ctx);
+    await Future.delayed(const Duration(seconds: 2));
     Navigator.of(ctx).pushReplacementNamed(NamedRoutes.mood, arguments: arg);
   }
 }

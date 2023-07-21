@@ -5,6 +5,7 @@ import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../core/core.dart';
+import '../../logic/logic.dart';
 
 class ImgHelper {
   ImgHelper._();
@@ -25,6 +26,7 @@ class ImgHelper {
     required String pickedImg,
     required BuildContext ctx,
   }) async {
+    AdHelper.loadNativeAd();
     final croppedFile = await ImageCropper().cropImage(
       sourcePath: pickedImg,
       compressFormat: ImageCompressFormat.jpg,
