@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import '../../core/core.dart';
 
@@ -18,10 +19,11 @@ class OutlinedText extends StatelessWidget {
             style: forSmall
                 ? CommonStyle.subHeaderOuterGray
                 : CommonStyle.headerOuterGray),
-        Text(label,
-            style: forSmall
-                ? CommonStyle.subHeaderCoreWhite
-                : CommonStyle.headerCoreWhite),
+        if (Platform.isAndroid)
+          Text(label,
+              style: forSmall
+                  ? CommonStyle.subHeaderCoreWhite
+                  : CommonStyle.headerCoreWhite),
       ],
     );
   }

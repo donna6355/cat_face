@@ -38,6 +38,10 @@ class ImgHelper {
           lockAspectRatio: true,
           hideBottomControls: true,
         ),
+        IOSUiSettings(
+          title: Languages.of(ctx)!.picGuide,
+          rotateButtonsHidden: true,
+        )
       ],
     );
     if (croppedFile == null) return;
