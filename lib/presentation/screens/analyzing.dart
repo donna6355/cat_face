@@ -25,10 +25,7 @@ class Analyzing extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 24),
-              child: Placeholder(
-                fallbackWidth: 320,
-                fallbackHeight: 200,
-              ),
+              child: Image.asset(Assets.loading),
             ),
             if (AdHelper.nativeAd != null)
               ConstrainedBox(
