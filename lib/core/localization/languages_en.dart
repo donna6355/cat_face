@@ -68,5 +68,5 @@ class LanguagesEn extends Languages {
       'ERROR... It is failed to analyze an unidentified creature....';
   @override
   String get warning =>
-      "This application is analyzing images based on general knowledge. Do NOT take it seriously, it is just for fun! Visit your vet for scientific and medical advice!";
+      "** This application is analyzing images based on general knowledge. Do NOT take it seriously, it is just for fun! Visit your vet for scientific and medical advice!";
 }
