@@ -32,8 +32,8 @@ class Analyzing extends StatelessWidget {
                 constraints: const BoxConstraints(
                   minWidth: 320,
                   minHeight: 320,
-                  maxWidth: 320,
-                  maxHeight: 320,
+                  maxWidth: 400,
+                  maxHeight: 400,
                 ),
                 child: AdWidget(ad: AdHelper.nativeAd!),
               )
