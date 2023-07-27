@@ -19,5 +19,5 @@ Application for reading cat's face and guess its mood by using tensorflowlite mo
 ### Build
 
 ```
-flutter build appbundle
+flutter build appbundle --dart-define-from-file=config.json
 ```
