@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import './core/core.dart';
 import './presentation/screens/screens.dart';
@@ -77,7 +78,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         elevatedButtonTheme:
             ElevatedButtonThemeData(style: CommonStyle.basicBtn),
-        fontFamily: Constants.fontGamja,
+        fontFamily: GoogleFonts.gamjaFlower().fontFamily,
         primaryColor: Colors.black,
       ),
       routes: {
