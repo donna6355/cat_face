@@ -1,7 +1,6 @@
 class Constants {
   Constants._();
   static const String appTitle = '기분 어떠냐옹 MOODEOW';
-  static const String fontGamja = 'GamjaFlower';
 }
 
 class Assets {

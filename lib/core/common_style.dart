@@ -1,5 +1,5 @@
-import 'package:cat_face/core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CommonStyle {
   CommonStyle._();
@@ -49,7 +49,7 @@ class CommonStyle {
     foregroundColor: MaterialStateProperty.all<Color>(subGray),
     fixedSize: MaterialStateProperty.all<Size>(const Size(200, 40)),
     textStyle: MaterialStateProperty.all<TextStyle>(
-      const TextStyle(fontSize: 18, fontFamily: Constants.fontGamja),
+      TextStyle(fontSize: 18, fontFamily: GoogleFonts.gamjaFlower().fontFamily),
     ),
   );
 
@@ -58,7 +58,7 @@ class CommonStyle {
     foregroundColor: MaterialStateProperty.all<Color>(primaryGray),
     fixedSize: MaterialStateProperty.all<Size>(const Size(200, 40)),
     textStyle: MaterialStateProperty.all<TextStyle>(
-      const TextStyle(fontSize: 18, fontFamily: Constants.fontGamja),
+      TextStyle(fontSize: 18, fontFamily: GoogleFonts.gamjaFlower().fontFamily),
     ),
   );
 }
