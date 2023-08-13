@@ -13,31 +13,33 @@ class Analyzing extends StatelessWidget {
   Widget build(BuildContext context) {
     final String file = ModalRoute.of(context)!.settings.arguments as String;
     ClassifierRepo.classifyImg(path: file, ctx: context);
-    return Material(
-      child: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: [
-            const SizedBox(height: 88),
-            OutlinedText(
-              label: Languages.of(context)!.analyzing,
-              forSmall: true,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 24),
-              child: Image.asset(Assets.loading),
-            ),
-            if (AdHelper.nativeAd != null)
-              ConstrainedBox(
-                constraints: const BoxConstraints(
-                  minWidth: 320,
-                  minHeight: 320,
-                  maxWidth: 400,
-                  maxHeight: 400,
-                ),
-                child: AdWidget(ad: AdHelper.nativeAd!),
-              )
-          ],
+    return SafeArea(
+      child: Material(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              const SizedBox(height: 88),
+              OutlinedText(
+                label: Languages.of(context)!.analyzing,
+                forSmall: true,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 24),
+                child: Image.asset(Assets.loading),
+              ),
+              if (AdHelper.nativeAd != null)
+                ConstrainedBox(
+                  constraints: const BoxConstraints(
+                    minWidth: 320,
+                    minHeight: 320,
+                    maxWidth: 400,
+                    maxHeight: 400,
+                  ),
+                  child: AdWidget(ad: AdHelper.nativeAd!),
+                )
+            ],
+          ),
         ),
       ),
     );
