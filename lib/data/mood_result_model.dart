@@ -45,7 +45,7 @@ class MoodRes {
       'excited': Languages.of(ctx)!.excitedCatContents,
     };
     final String label = res.label;
-    return res.score < 0.6
+    return res.score < 0.8
         ? MoodRes(
             file: file,
             header: Languages.of(ctx)!.failed,

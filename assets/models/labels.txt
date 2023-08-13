@@ -1,5 +1,5 @@
-peace
-yawn
 angry
+yawn
+peace
 sleepy
 excited
